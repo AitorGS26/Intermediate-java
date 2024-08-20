@@ -19,5 +19,35 @@ public class ee_OOP_encapsulation_Logic {
             System.out.println("The amount of clothes is exceeding the capacity");
         }
     }
-    private void wash
+    private void wash(){
+        filling();
+        if (filling == 1) {
+            if (clotheType == 1) {
+                System.out.println("White clothes / smooth wash");
+                System.out.println("Washing...");
+                washCompleted = 1;
+            }            
+        } else if(clotheType == 2){
+            System.out.println("Color clothes / intense wash");
+            System.out.println("Washing...");
+            washCompleted =1;
+        }else{
+            System.out.println("The type of clothes is not available");
+            System.out.println("It will be washed as color clothes");
+            washCompleted = 1;
+        }
+    }
+    private void dry(){
+        wash();
+        if (washCompleted == 1) {
+            System.out.println("Wash finished, drying...");
+            dryCompleted = 1;            
+        }
+    }
+    public void finishedCycle(){
+        dry();
+        if (dryCompleted == 1) {
+            System.out.println("Your clothes are ready");            
+        }
+    }
 }
