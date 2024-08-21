@@ -29,6 +29,9 @@ a new line of dishwashers with the following characteristics:
     3- The class has to ve well encapsuled, for avoiding future unnecesary methods
     or variables by the programmers of Zero
     4-The only method to import will be cycle completed.
+
+    The exercise will be a project called e-washing-machine-project, there will be all the code and explanations of
+    what am I doing.
 * */
 
 public class e_OOP_encapsulation {
