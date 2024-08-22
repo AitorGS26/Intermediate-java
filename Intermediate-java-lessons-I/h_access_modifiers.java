@@ -18,6 +18,6 @@
     - h_Public_modifier_project
  */
 
-public class h_Access_Modifiers_Default {
+public class h_access_modifiers {
     
 }
