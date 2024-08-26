@@ -4,17 +4,22 @@
 
  * In the father class, we'll do all the logic of the program, we declare here the variables and methods
  for later using them in the doughter clasess. */
-
 package package1;
 //The scanner is imported for asking data to the user.
+
 import java.util.Scanner;
-//The class will be abstract, this is fot telling it that inside will be an abstract method for polymorfism
-public abstract class polimorfism_father{
-    //here we declare the variabls (the correct for polymorfism and inheritance is declaring them as protected)
+
+/*The class will be abstract, this is for telling it that inside will be an abstract method 
+for polymorfism*/
+public abstract class polimorfism_father {
+
+    /*here we declare the variables (the correct for polymorfism and inheritance is declaring 
+    them as protected)*/
     protected int valueOne, valueTwo, result;
     Scanner input = new Scanner(System.in);
 
-    public void askData(){
+    //Here we declare the method to ask data to the user with scanner.
+    public void askData() {
         System.out.print("Introduce the first number: ");
         valueOne = input.nextInt();
 
@@ -22,13 +27,14 @@ public abstract class polimorfism_father{
         valueTwo = input.nextInt();
 
     }
-    /*After declaring the valies and connecting them to the data introduced bya the user with scanner
-     we declare the abstract method, called operations, that will save both the add and the subtracktion.*/
 
+    /*After declaring the values and connecting them to the data introduced by the user with scanner
+     we declare the abstract method, called operations, that will save both the add and the subtraction.*/
     public abstract void operations();
+
     //as we can see the above method is finished by; this is because we can't declare inside of it.
     //for declaring something like the result we'll do another public method like below.
-    public void showAnswer(){
+    public void showAnswer() {
         System.out.println(result);
     }
 }

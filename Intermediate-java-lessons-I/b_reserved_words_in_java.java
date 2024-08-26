@@ -12,8 +12,8 @@ This is the reason programmers can use them as identifiers for their programs.
 *char       *final        *int            *return        *throws
 *class      *finally      *interface      *short         *transient
 
-* ALl those words have a special function
-* */
+* ALl those words have special functions
+* Use this as a guide of them if sometime you need*/
 
 public class b_reserved_words_in_java {
 }
