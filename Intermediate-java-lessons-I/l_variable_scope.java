@@ -9,7 +9,7 @@
    they will be only give access for one class ore more. you dont have to init it.
  * static => Theyare for the class they're created for only, they allow using them depending on the acces modifier it has.
  */
-public class L_variable_scope {
+public class l_variable_scope {
 
     static int staticVariable;//this depends on the acces modifier.
     int globalVariable; //this is global
