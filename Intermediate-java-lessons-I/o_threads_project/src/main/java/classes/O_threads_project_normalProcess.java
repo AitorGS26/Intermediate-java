@@ -14,7 +14,7 @@ public class O_threads_project_normalProcess {
         System.out.println("");
 
         for (int i = 0; i < 5; i++) {
-            System.out.println("Second process");
+            System.out.println("Second process");.
         }*/
         //Below is thread way to print the process
         process_2 thread2 = new process_2();//if you use extends Thread, you'll use this line
