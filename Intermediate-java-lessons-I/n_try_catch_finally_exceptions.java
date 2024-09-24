@@ -11,7 +11,7 @@ program. It's an error control.
   The way the programmer resolve this annomally is known as exception management
   
   * Exceptions are a tool for allowing the programmer to have situation under contron
-  with code that at the beggining is not working as i has to.*
+  with code that at the beggining is not working as it has to.*
   
   In java there are reserved words for the management of the exceptions:
 

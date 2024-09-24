@@ -9,7 +9,6 @@ public class N_exceptions_project {
 
         try {
 
-            System.out.println("Hello World!");
             int value1, value2, result;
             Scanner input = new Scanner(System.in);
 

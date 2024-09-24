@@ -21,8 +21,9 @@ the reality, taking some essential concepts from it.
                                           coffeOn = true;
                                           } She can walk a mountain, when she takes her coffee)
 
-* With this, we're going to explain with an example, for this,
-we're going to create two classes, the first one is for declaring the different objects
+* With this, we're going to explain it with an example.
+
+We're going to create two classes, the first one is for declaring the different objects
 and variables, the other is for the logical part of the program.
 *
 * Example, make a program that asks the user for two numbers, then add one to the other.*/
@@ -32,22 +33,31 @@ import java.util.Scanner;
 public class c_OOP_Object_Oriented_Programming {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);//we start declaring the scanner for user's input.
+        /*When we arrive to this point, we've to pass to cc_OOP_Object_oriented_programming_logical
+         for seeing the logical part behind this pages variables.*/
+
+ /*The main class will start asking user info for making it work */
+        Scanner input = new Scanner(System.in);//We start declaring the scanner for user's input.
 
         System.out.print("Introduce the first number ");
-        int first = input.nextInt();//we ask for first number and we save it inside first variable
+        int first = input.nextInt();//We ask for first number and we save it inside first (global)variable
 
         System.out.print("Introduce the second number ");
-        int second = input.nextInt();//sam for second number and we save it inside second varible.
+        int second = input.nextInt();//sam for second number and we save it inside second (global)varible.
 
         /*By here, the procedure is as usual as we've been seen, but, for doing it OOP, next is the key.
-*First of all we've previously created a class called also "first" but in the call that ends by _logical. 
-Then here for connecting them, we've created an object with the name of the logical class. Calling it adding
-and saving inside of it*/
+        *First of all we've previously created a variable called "first" but in the logical class.
+
+        Then here for connecting them, we've created an object with the name of the logical class.
+        Calling it adding and saving inside of it*/
         cc_OOP_Object_Oriented_Programming_logical adding = new cc_OOP_Object_Oriented_Programming_logical(first, second);
-        //After that, we go to the logical class, we see the andwer in print class, we've done the logical part there
-        //we print the data inside "adding" object with the info of the logical part and this part both inside.
+
+        /*As two classes are connected by abroves object and the constructor of the logical class 
+        we print the data inside "adding" object with the info we've inside of print (opration class 
+        is also inside print if you remember)*/
         adding.print();
-//Finally for printing it we mention the logical classes print class, for printing by main method.
     }
 }
+/*This is the way of connecting two classes for having it more clear and object oriented.
+ * At the main class we declare user's inputs, and the scanner for it, also the firt and second variables
+ which we pretend to connect with the logical classes variables.*/

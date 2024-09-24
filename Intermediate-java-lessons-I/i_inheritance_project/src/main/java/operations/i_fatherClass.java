@@ -10,15 +10,14 @@
     * Make a program using inheritance, a program that will ask for two numbers
     to a user, and one of the classes will do the adding and other the subtraction. printing
     the result in a third class or main class */
-package operations;
+package operations;//We use same package for the father and sons
 
 import java.util.Scanner;
 
 public class i_fatherClass {
 
     /*We start declaring the values where we'll alocate the data user has introduced.
-     * also we declare a scanner for allowing the users interaction
-     */
+     * also we declare a scanner for allowing the users interaction*/
     protected int valueOne, valueTwo, result;
     Scanner input = new Scanner(System.in);
 

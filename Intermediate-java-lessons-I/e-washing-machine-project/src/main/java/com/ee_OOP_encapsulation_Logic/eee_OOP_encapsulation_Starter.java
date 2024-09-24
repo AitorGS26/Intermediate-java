@@ -10,13 +10,14 @@ public class eee_OOP_encapsulation_Starter {
 
         System.out.println("Color or white clothes?");
         System.out.println("Introduce 1 for white clothes or 2 for color clothes");
+
         /*Clothe type here is new variable, not the same as in the functions part, this is because 
-they were private*/
+        they were private*/
         int clotheType = input.nextInt();
 
         System.out.println("How much kg?");
         int kg = input.nextInt();
-        /*We declare an object with the name of the logicclass, this will be the messenger between two
+        /*We declare an object with the name of the logic class, this will be the messenger between two
          classes, we add the variables we've the user's data inside for having the comunication between classes
          and then the logic part will work.
          After finishing the logic part it will return and messenger will call to the print method to print 

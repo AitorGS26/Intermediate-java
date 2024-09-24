@@ -9,7 +9,7 @@ public class process extends Thread {//we inherit thread father class
     int num_int;//this is the parameter which will receive info for two threads, for printing to one or other serial numbers
 
     /*Below we've put this.getname for knowing from which thread is printing the program.
-     * but the display is disgusting so we want to personalye it, for that we'll make a builder*/
+     * but the display is disgusting so we want to personalize it, for that we'll make a builder*/
     public process(String threadName) {//We want to receive the data on thread name and that's a string
         super(threadName);//thank of super word, when we create this classes object the objects will ask for an string, we'll program then and finally print them with the names we want.
     }

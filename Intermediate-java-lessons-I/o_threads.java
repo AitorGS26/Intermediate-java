@@ -5,9 +5,8 @@
 
  For a better understanding, there will be a project => o_threads_project
  */
-
 package package1;
 
 public class o_threads {
-    
+
 }

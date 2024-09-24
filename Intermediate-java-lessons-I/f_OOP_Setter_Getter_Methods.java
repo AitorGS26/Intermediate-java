@@ -1,7 +1,7 @@
 /* As we've seen, encapsuling is the way we show or we hide some class atributes in our code 
 for other programmers interaction with our creations.
  * 
- * Sometimes is neccesary to let permisson to have acces to someone to an atribute of the class, 
+ * Sometimes is neccesary to let permisson to acces someone to an atribute of the class, 
  without deleting the encapsuling, for this job we use setter and getter.
 
  * The "set" method => it assigns a value to an atribute of our class, it has to have void in it's 

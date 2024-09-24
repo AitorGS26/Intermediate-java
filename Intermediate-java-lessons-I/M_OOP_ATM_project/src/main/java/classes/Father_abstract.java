@@ -10,7 +10,7 @@
   
  * The project will include the following concepts of the lessons we've been studying.
   
- * * OOP paradigm
+ * * OOP paradigm (different classes for each function and a main class calling those methods)
  * * Encapsuling
  * * Setter and Getter methods
  * * Inheritance
@@ -27,15 +27,15 @@ public abstract class Father_abstract {
 
     /*We've going to have inheritance at the atributes, and for declaring them, 
     they'll be protected*/
-    protected int transactions, withdrawal, deposit;
-    protected static int balance;
+    protected int transactions, withdrawal, deposit; //global with protected access modifier
+    protected static int balance;//static with protected access modifier
     Scanner input = new Scanner(System.in);
 
     /*Abrove, we've global variables, the interaction of the user with the ATM will be
- as protected
+   as protected
  
- * Below, we've declared the first method(function) of our program, it will be operations,
- where inside there will be the option menu which the user will use.*/
+   * Below, we've declared the first method(function) of our program, it will be operations,
+   where inside there will be the option menu which the user will use.*/
     public void operations() {
 
         /*The following variables, are local variables, they only will work inside "operations" method.

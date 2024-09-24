@@ -1,5 +1,5 @@
 /* Access modifiers allow to give a major security to our clases, keeping restricted the access 
-to different atributes, metthods and contructors.
+to different atributes, methods and contructors.
 
  * In java we've 4 access modifiers:
  
