@@ -20,9 +20,10 @@ public class mainClass {
         messenger_add.operations();
         messenger_add.showAnswer();
 
-        /*Then we do the same as above but the object will come from the doughter subtract, that is daughter of
-         father, in this way we'll two of the options available, and with the same operations object.
-         */
+        /*Then we do the same as above but the object will come from the doughter subtract, that is inherit of
+         father, in this way we'll two of the options available, and with the same operations object but with different
+         function.*/
+         
         polimorfism_father messenger_subtrackt = new polimorfism_subtractingDaughter();
         messenger_subtrackt.askData();
         messenger_subtrackt.operations();

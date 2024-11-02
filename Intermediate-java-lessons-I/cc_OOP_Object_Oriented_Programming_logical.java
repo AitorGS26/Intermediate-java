@@ -5,8 +5,7 @@ public class cc_OOP_Object_Oriented_Programming_logical {
      * We've to make a program for adding user's two numbers, so we start declaring 3 int type variables.
      * first (user's first number)
      * second (user's second number)
-     * answ (the adding result)
-     */
+     * answ (the adding result)*/
     private int first, second, answ;
 
     /*After that, we need a constructor, putting inside of the brackets the variables we're

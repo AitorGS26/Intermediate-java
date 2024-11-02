@@ -21,8 +21,8 @@ public class O_threads_project_normalProcess {
         Thread thread1 = new Thread(new process_1());//This is only for implements runneable
 
         //Now we've all the data but for starting threads you'll the the following:
-        thread1.start();
         thread2.start();
+        thread1.start();
 
     }
 

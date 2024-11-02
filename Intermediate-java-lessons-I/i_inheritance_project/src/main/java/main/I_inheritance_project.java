@@ -33,7 +33,7 @@ public class I_inheritance_project {
      and to use extends to allow doughters using the variables and methods of the father.
 
      * Then to connect to the main class, in another package, the main class will 
-     import the classes as librarys, then creating an object with the name of the 
-     doughter classes this one will act as a messenger between packages
+     import the classes as librarys.
+     * Creating an object with the name of the doughter classes this one will act as a messenger between packages
      and taking the encapsuling in account, we could use some articles and methods in the main class.*/
 }

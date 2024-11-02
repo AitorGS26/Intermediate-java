@@ -17,13 +17,13 @@ public class ee_OOP_encapsulation_Logic {
     this is a class only we can see.*/
     private int kg = 0, full = 0, clotheType = 0, washCompleted = 0, dryCompleted = 0;
 
-    /*this is a public constructor so the other programmer will iteract with this one
+    /*Below's is a public constructor so the other programmer will iteract with this one
      
     * inside of it we receive the info of kg and clothtype, relating them with this classes
      variables, called with the same name.
     
-    * As we've seen in the this reserved word lesson.
-     */
+    * As we've seen in the this reserved word lesson.*/
+
     public ee_OOP_encapsulation_Logic(int kg, int clotheType) {
 
         this.kg = kg;

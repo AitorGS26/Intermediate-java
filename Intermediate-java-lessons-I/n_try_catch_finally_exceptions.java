@@ -6,11 +6,11 @@ program. It's an error control.
   *Try to open a non existant directory
   *Try to divide a number over 0
   
-  An exception is a anomally situation that can happen when we execute a program
+  An exception is an anomallous situation that can happen when we execute a program
   
   The way the programmer resolve this annomally is known as exception management
   
-  * Exceptions are a tool for allowing the programmer to have situation under contron
+  * Exceptions are a tool for allowing the programmer to have situation under control
   with code that at the beggining is not working as it has to.*
   
   In java there are reserved words for the management of the exceptions:
@@ -18,8 +18,6 @@ program. It's an error control.
     * try
     * cath
     * finally
-
-  * There are more advanced words for error control but for now this 
   
   There will be a project for a better understanding => n_exceptions_project*/
 

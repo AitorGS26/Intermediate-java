@@ -23,7 +23,7 @@ package classes;
  like that because it also will be abstract.*/
 import java.util.Scanner;
 
-public abstract class Father_abstract {
+public abstract class Father_abstract { //abstract because of polymorfism
 
     /*We've going to have inheritance at the atributes, and for declaring them, 
     they'll be protected*/
@@ -31,10 +31,10 @@ public abstract class Father_abstract {
     protected static int balance;//static with protected access modifier
     Scanner input = new Scanner(System.in);
 
-    /*Abrove, we've global variables, the interaction of the user with the ATM will be
+    /*Above, we've global variables, the interaction of the user with the ATM will be
    as protected
  
-   * Below, we've declared the first method(function) of our program, it will be operations,
+   * Below, we've declared the first function of our program, it will be operations,
    where inside there will be the option menu which the user will use.*/
     public void operations() {
 
@@ -45,7 +45,7 @@ public abstract class Father_abstract {
         /* The above variables, flag and selecion will have the following use.*/
 
 
- /* Flag will have the value 0 at the beggining, when the user press any of the option,
+ /* Flag will have the value 0 at the beggining, when the user press any of the options,
  it will change the value to 1 and it will be outside the do-while loop, but, when the user choose an
  option, and finish it's interaction, the menu will appear as a loop again, for giving him the 
  opportunity of choose a new option, for that we'll do 2 do-while loops. */

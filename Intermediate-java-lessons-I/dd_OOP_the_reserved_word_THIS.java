@@ -5,7 +5,7 @@ public class dd_OOP_the_reserved_word_THIS {
      part where the program will do the calculations.*/
     private int base, height, answer;
 
-    /*Here we receive the data frob base and height, from the main method
+    /*Here we receive the data of base and height, from the main method
      * we make it public, for allowing the main class to see what's inside the method.     */
     public dd_OOP_the_reserved_word_THIS(int base, int height) {
         this.base = base;

@@ -21,7 +21,7 @@ public class i_fatherClass {
     protected int valueOne, valueTwo, result;
     Scanner input = new Scanner(System.in);
 
-    //The following method's utility is to ask the user values for the operations.
+    //The following function is for asking the user values for the operations.
     public void askData() {
         System.out.print("Introduce your first number: ");
         valueOne = input.nextInt();//The data is a number so we save thank to .nextInt

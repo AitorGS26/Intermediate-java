@@ -1,21 +1,20 @@
-/*
-* For OOP, we need to relate two or more classes with the main class.
+/* For OOP, we need to relate two or more classes with the main class.
 
 * This is only possible if we mention variables of the main method on the
 new class, and so on.
 
-* Sometimes, or always, the programmer want to put same name to same variable but one is from
-the main class and the other no, as we have seen in the previous lesson.
+* Sometimes, or always, the programmer want to put same name to same variable but one is 
+from the main class and the other no, as we have seen in the previous lesson.
 *
-* In that lesson we wanted to relate the first number the user has introduced and the second also
-with the ones we'd created on the logical side, but when we want to relate them,
+* In that lesson we wanted to relate the nembers the user has introduced with the 
+ones we'd created on the logical side, but when we want to relate them,
 how knows the program which is which, for that, we use the this method.
 *
-* In the logical class,where we're going to add data inside the variables
+* In the logical class, where we're going to add data inside the variables
 that come from the main class, we put the this method, for telling the program, that "this"
 variables are where we want to allocate the data we're receiving from the main class.
-*
-*
+
+
 * For a better understanding, below and in the dd_... the logical part
 you can find the following exercise.
 *
