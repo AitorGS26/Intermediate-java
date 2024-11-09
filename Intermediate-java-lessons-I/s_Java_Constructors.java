@@ -4,7 +4,7 @@
  * Is the FIRST method running
  * It doesn't return data
  * It runs only once
- * The objectiveis to init atributes
+ * The objective is to init and give form to atributes
  * 
  * For a deeper explanation go to the project => s_javaConstructor_project
  */

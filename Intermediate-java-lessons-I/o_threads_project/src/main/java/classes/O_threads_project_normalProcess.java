@@ -5,9 +5,12 @@ package classes;
 public class O_threads_project_normalProcess {
 
     public static void main(String[] args) {
-        //Below is the normal process, you can uncomment and comment the thread one for a comparison
+        /*Below is the normal process, you can uncomment and comment the thread one for a comparison
+         * if the process that runs is the normal one "without threads, it will print 
+         * five times first process and then the asme with second process."
+        */
 
-        /*for (int i = 0; i < 5; i++) {
+        /*for (int i = 0; i <= 5; i++) {
             System.out.println("First process");
         }
 

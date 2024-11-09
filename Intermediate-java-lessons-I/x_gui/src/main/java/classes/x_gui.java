@@ -11,9 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+/*Librarys for using suddenly*/
 
-/*we start importing the different librarys, for using them
- in the next lines*/
 public class x_gui extends JFrame implements ActionListener {
 
     private JTextField textField1;

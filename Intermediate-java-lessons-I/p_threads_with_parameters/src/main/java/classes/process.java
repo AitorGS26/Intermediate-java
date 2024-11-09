@@ -21,8 +21,8 @@ public class process extends Thread {//we inherit thread father class
     public void run() {
     //for threads we've learned we've to call run method and inside of it put the logic
         for (int i = 0; i <= num_int; i++) {
-            System.out.println(i + this.getName()); 
-            //we print but also ask from what thread is the info
+            System.out.println(i + this.getName());
+            //we print i and also the thread name
         }
         //Now we've to go to main class
         System.out.println("");

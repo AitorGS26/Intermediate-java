@@ -4,13 +4,13 @@
  */
 package classes;
 
-public class process_1 implements Runnable {//We implement runnable 
+public class process_1 implements Runnable {//We use implements runnable 
 
     @Override
     public void run() {
         for (int i = 0; i < 5; i++) {
             System.out.println("First process");
-            System.out.println("");
+            
         }
 
     }

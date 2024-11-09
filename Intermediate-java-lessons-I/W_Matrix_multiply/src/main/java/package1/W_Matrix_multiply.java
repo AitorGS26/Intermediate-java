@@ -1,5 +1,5 @@
 /*In the previouss lesson we started learning how to make operations with matrix,
- we learned how to add or subtracs same dimensions matrixes
+ we learned how to add or subtract same dimensions matrixes
 
  * In today's lesson we'll be learning how to multyply matrixes.
  
@@ -11,9 +11,9 @@
    as in the adding, so the result matrix has the lines of the first matrix with the columns of the 
    second
 
-   [a][a][a]     [c][d]     [(axc)+(axc)+(axc)][(axd)+(axd)+(axd)]
-   [b][b][b]  x  [c][d]  =  [(bxc)+(bxc)+(bxc)][(bxd)+(bxd)+(bxd)] 
-                 [c][d]
+   [a1][a2][a3]     [c1][d1]     [(a1xc1)+(a2xc2)+(a3xc3)][(a1xd1)+(a2xd2)+(a3xd3)]
+   [b1][b2][b3]  x  [c2][d2]  =  [(b1xc1)+(b1xc1)+(b3xc3)][(b1xd1)+(b2xd2)+(b3xd3)] 
+                    [c3][d3]
  */
 package package1;
 
@@ -24,7 +24,8 @@ public class W_Matrix_multiply {
         int Matrix1[][] = new int[2][3];
         int Matrix2[][] = new int[3][2];
         int matrixResult[][] = new int[2][2];
-        /*For loop for adding the data of each position of the matrix randomly */
+        
+        /*Loop for adding the data of each position of the matrix randomly */
         for (int i = 0; i < Matrix1.length; i++) {//i refers to the lines of the matrix1
             for (int j = 0; j < Matrix1[0].length; j++) {/*j refers to the columns of
                 matrix1. Adding [0] in j<Matrix1[0] for better understanding for the program*/
@@ -39,10 +40,11 @@ public class W_Matrix_multiply {
             }
         }
         //Making operations
-        /* we add an if else if structure for each position of matrixResult
+        /* we add an if else structure for each position of matrixResult
          * Above at the explanation we learned the way the operations are done if it's a multiplication
          */
-        for (int i = 0; i < 10; i++) {//We make a for loop for ensuring all the positions will be added properly
+        for (int i = 0; i < 10; i++) {/*We make a for loop for ensuring all the positions 
+            will be added properly*/
 
             if (matrixResult[0][0] == 0) {
                 int temp = (Matrix1[0][0] * Matrix2[0][0]) + (Matrix1[0][1] * Matrix2[1][0])
@@ -74,11 +76,9 @@ public class W_Matrix_multiply {
             }
         }
         //printing the program
-        /*First for loop refers  to first Matrix, the conditions are <3 because i refesr to lines
-         and Matrix1 has 2 lines
-         */
-        for (int i = 0; i < 3; i++) {/*we've 3 lines because matrix2 has 3 lines so we add a for 
-        loop and put i<3 because it starts by 0 so last loop will be for "2" line starting by "0"*/
+        for (int i = 0; i < 3; i++) {/*we've 3 lines because matrix2 has 3 lines and its the largest one
+        in lines so we add a for loop and put i<3 because it starts by 0 so last loop will be for 
+        "2" line starting by "0"*/
 
             if (i < 2) {/*We start printing Matrix1, the if statement will add i(lines)<2 because it
                 has two lines and we start by 0 */
@@ -91,7 +91,8 @@ public class W_Matrix_multiply {
                     System.out.print("     ");
                 }
             } else {
-                System.out.print("              ");//space for the 3 line, for a better look with matrix2
+                System.out.print("              ");
+                //space for the 3 line, for a better look with matrix2
             }
 
             for (int j = 0; j < 2; j++) {

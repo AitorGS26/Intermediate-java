@@ -1,4 +1,5 @@
 /* A thread in programming is a flux control that has multiple proceses running simultaneously.
+ We can run two or more process at the same time.
  * 
  * With the help of threads we will be able to execute two or more processes at the same time
  without waiting one process to finish  before the next starts

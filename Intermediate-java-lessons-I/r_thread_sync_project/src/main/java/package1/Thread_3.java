@@ -8,7 +8,7 @@ public class Thread_3 extends Thread {
             System.out.print("l");
 
             try {
-                Thread_3.sleep(1000);
+                Thread_3.sleep(1005);
             } catch (InterruptedException e) {
                 System.out.println("Warning! look thread 3 " + e);
             }

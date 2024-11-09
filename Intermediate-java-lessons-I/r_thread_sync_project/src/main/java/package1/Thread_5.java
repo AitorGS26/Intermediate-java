@@ -8,7 +8,7 @@ public class Thread_5 extends Thread {
             System.out.println("o");
 
             try {
-                Thread_5.sleep(1000);
+                Thread_5.sleep(1006);
             } catch (InterruptedException e) {
                 System.out.println("Warning! look thread 5 " + e);
             }

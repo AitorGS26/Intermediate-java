@@ -10,8 +10,7 @@ public class R_thread_sync_project {
     public static void main(String[] args) {
         /*We come here directly after creating all Thread classes. 
         
-         * We've to comunicate those classes with the main class that is this one,
-         for that as we've learned we've to make an object for comunicating classes as below. */
+         * We connect thread classes with this, main class*/
         Thread_1 thread1 = new Thread_1();
         Thread_2 thread2 = new Thread_2();
         Thread_3 thread3 = new Thread_3();
@@ -20,42 +19,42 @@ public class R_thread_sync_project {
 
 
         /*Now, as we've learned in the thread status lesson, we've threads created
-         and in new state because they only have been created and syncronized. for starting them
+         and in "new" state because they only have been created and syncronized. for starting them
          we've to add the start method as below*/
         thread1.start();
-        /*After proving this code, I've noticed that syncronizing ir was beaing more difficult
-         than I thought, the problem was I was putting same sleep time in the this thread objects
+        /*After proving this code, I've noticed that syncronizing it was being more difficult
+         than expected, the problem was I was putting same sleep time in the this thread objects
          and in the thread classes. The correct way that has make the program work is 
          to play with timmings until we've the result that appears when you start the program.
 
          Here for the moment I don't have a scientific answer about how to sync well, my recomendation
          is to try different timmings and look the results until you have the timming you need.*/
         try {
-            thread1.sleep(10);
+            thread1.sleep(100);
         } catch (InterruptedException e) {
             System.out.println("Warning! look thread 1 " + e);
         }
         thread2.start();
         try {
-            thread2.sleep(11);
+            thread2.sleep(140);
         } catch (InterruptedException e) {
             System.out.println("Warning! look thread 2 " + e);
         }
         thread3.start();
         try {
-            thread3.sleep(11);
+            thread3.sleep(120);
         } catch (InterruptedException e) {
             System.out.println("Warning! look thread 3 " + e);
         }
         thread4.start();
         try {
-            thread4.sleep(10);
+            thread4.sleep(120);
         } catch (InterruptedException e) {
             System.out.println("Warning! look thread 4 " + e);
         }
         thread5.start();
         try {
-            thread5.sleep(11);
+            thread5.sleep(110);
         } catch (InterruptedException e) {
             System.out.println("Warning! look thread 5 " + e);
         }

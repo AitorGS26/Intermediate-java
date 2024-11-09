@@ -6,8 +6,8 @@
  * Converting rectangular to polar coordinates.
  * 
  * 
- * Also "Math" has the reference to two of the most used constants with 15 decimals of precision, 
-   which are
+ * Also "Math" has the reference to two of the most used constants with 15 decimals 
+   of precision, which are
    * e = 2. 718281828459045
    * pi = 3,1415192653589793
 

@@ -25,8 +25,8 @@ public class V_add_subtraction_ofMatrix {
         int matrixResult[][] = new int[3][3];//finally the result of the adding 
 
         //First matrix
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1.length; j++) {
+        for (int i = 0; i < matrix1.length; i++) {//acts at the lines of matrix1
+            for (int j = 0; j < matrix1.length; j++) {//acts at the columns of matrix1
                 matrix1[i][j] = (int) (Math.random() * 5);
             }
         }
@@ -50,8 +50,8 @@ public class V_add_subtraction_ofMatrix {
                 matrixResult[i][j] = matrix1[i][j] + matrix2[i][j];
             }
         }
-        /*The above's loop, is same as before, this is because qe need to make a loop for
-        lines and columns. In this case we have same dimension matrixes for adding or subtracting
+        /*The above's loop, is same as before, this is because we need to make a loop for adding the
+        result lines and columns. In this case we have same dimension matrixes for adding or subtracting
         so doesn't matter which lenght we put inside of the loop, for proving it, i've putted in the
         first one Matrix1's lenght and in the second loop Matrix2's
 
@@ -61,11 +61,13 @@ public class V_add_subtraction_ofMatrix {
         //Printing matrix
 
         /*By now we've make the logic of the program, it has be easy, isn't it?
-         *Now we find an obstacle when we try to print it like the exercise asks, but we'll make int
+         *Now we find an obstacle when we try to print it like the exercise asks, but we'll make it
          
          * We start printing matrix 1, inside a for loop for acting in it's lines and columns, as before*/
         for (int i = 0; i < matrix1.length; i++) {
 
+           
+           
             for (int j = 0; j < matrix1.length; j++) {
                 System.out.print("[" + matrix1[i][j] + "]");
             }
@@ -75,11 +77,12 @@ public class V_add_subtraction_ofMatrix {
             } else {
                 System.out.print("     ");
             }
-            /*Above's ifElse say's that when i (lines) is 1, it starts at 0 and the rules tell the program
+            /*Above's ifElse say's that when i (lines) is 1, (it starts at 0 and the rules tell the program)
         i++ while i>matrix1.length so it will print it at the second line, because in java it aways
         start counting at 0*/
 
             //same as with matrix1
+            
             for (int j = 0; j < matrix2.length; j++) {
                 System.out.print("[" + matrix2[i][j] + "]");
             }
