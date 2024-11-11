@@ -2,13 +2,10 @@ package stacklists;
 
 import javax.swing.JOptionPane;
 
-import org.w3c.dom.Node;
-
 /*This class will be the one who will create the behaviour os a stack list */
-public class stack {
+public class stack{
 
-
-    private Node InputtedLastValue;//Declaration: node for knowing last value and if the list is empty
+    nodes InputtedLastValue;//Declaration: node for knowing last value and if the list is empty
     int size = 0; //Declaration: an entire number with size name and 0 value
     String list = "";//Declaration: string for the list's data
 
@@ -31,7 +28,7 @@ public class stack {
 //Function for introducing a node in the stack
 
 public void introduceNode(int node){
-    Node new_node = new Node(node);
+     nodes new_node = new nodes (node);
     new_node.nextNode = InputtedLastValue;
     InputtedLastValue = new_node;
     size++;
@@ -45,7 +42,7 @@ public int deleteNode(){
 }
 //Function for knowing inputted last value
 public int showInputtedLastValue(){
-    return InputtedLastValue.nextNode;
+    return InputtedLastValue.info;
 }
 
 //Function for knowing stack's size
@@ -63,9 +60,9 @@ public void cleanupStack(){
 
 //Function for knowing the info of the stack
 public void showStacksInfo(){
-    Node way = InputtedLastValue;
+    nodes way = InputtedLastValue;
     while (way != null){
-        list += way.nextNode + "\n";
+        list += way.info + "\n";
         way = way.nextNode;
     }
     JOptionPane.showMessageDialog(null, list);

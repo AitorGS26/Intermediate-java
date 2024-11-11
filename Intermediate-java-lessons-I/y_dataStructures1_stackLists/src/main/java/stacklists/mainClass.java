@@ -1,19 +1,20 @@
 package stacklists;
 
-import java.util.Stack;
-
 import javax.swing.JOptionPane;
 
 public class mainClass{
+    public static void main(String[] args) {
+        
+    
     int option = 0, node = 0;
-    Stack stack  = new Stack();
+    stack stack  = new stack();
 
     do{
         try {
             option = Integer.parseInt(JOptionPane.showInputDialog(null,"Option Menu\n\n"
             + "1- Introduce nodes\n"
             + "2- Delete nodes\n"
-            + "3- Is the stack empty\n?"
+            + "3- Is the stack empty\n"
             + "4- Last value introduced in the stack\n"
             + "5- Amount of stack's nodes\n"
             + "6- Clean up the stack\n"
@@ -22,8 +23,9 @@ public class mainClass{
 
         switch (option) {
             case 1:
-              node=  Integer.parseInt (JOptionPane.showInputDialog(null, "please introduce the value for saving at the node"));
-                break;
+              node=  Integer.parseInt (JOptionPane.showInputDialog(null, "Please introduce the value for saving at the node"));
+              stack.introduceNode(node);  
+              break;
             case 2:
                 if (!stack.emptyStack()) {
                     JOptionPane.showMessageDialog(null, "It has been deleted a node whit numbert " 
@@ -48,12 +50,12 @@ public class mainClass{
                 }
                 break;
             case 5:
-                JOptionPane.showMessageDialog(null, "The stack has "+stack.showStackSize" nodes");
-                break;
+                    JOptionPane.showMessageDialog(null, stack.showStackSize());
+                                    break;
             case 6:
                 if (!stack.emptyStack()) {
                     stack.cleanupStack();
-                    JOptionPane.showMessageDialog(null, "The stack has succesfully be cleaned");
+                    JOptionPane.showMessageDialog(null, "The stack has succesfully cleaned");
                 } else {
                     JOptionPane.showMessageDialog(null, "Stack is empty");
                 }
@@ -71,4 +73,5 @@ public class mainClass{
         } catch (NumberFormatException e) {
         }
     }while (option != 8);
+}
 }
