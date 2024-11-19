@@ -2,6 +2,6 @@ package fifolists;
 
 public class node {
 
-    int info;
+    int information;
     node nextNode;
 }
