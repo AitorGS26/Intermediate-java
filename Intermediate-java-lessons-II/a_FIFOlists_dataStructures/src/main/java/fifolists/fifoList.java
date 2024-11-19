@@ -4,17 +4,17 @@ import javax.swing.JOptionPane;
 
 public class fifoList {
 
-    private node listBeginningNode, listfinalNode;
+    private node BeginningNode, finalNode;
     String list = "";
 
     public fifoList() {
-        listBeginningNode = null;
-        listfinalNode = null;
+        BeginningNode = null;
+        finalNode = null;
     }
 
     //Function for knowing if the list is empty
     public boolean emptyList() {
-        if (listBeginningNode == null) {
+        if (BeginningNode == null) {
             return true;
         } else {
             return false;
@@ -28,24 +28,24 @@ public class fifoList {
         new_node.nextNode = null;
 
         if (emptyList() == true) {
-            listBeginningNode = new_node;
-            listfinalNode = new_node;
+            BeginningNode = new_node;
+            finalNode = new_node;
         } else {
-            listfinalNode.nextNode = new_node;
-            listfinalNode = new_node;
+            finalNode.nextNode = new_node;
+            finalNode = new_node;
         }
     }
 
     //Function for etracting node
     public int extract() {
         if (!emptyList()) {
-            int information = listBeginningNode.information;
+            int information = BeginningNode.information;
 
-            if (listBeginningNode == listfinalNode) {
-                listBeginningNode = null;
-                listfinalNode = null;
+            if (BeginningNode == finalNode) {
+                BeginningNode = null;
+                finalNode = null;
             } else {
-                listBeginningNode = listBeginningNode.nextNode;
+                BeginningNode = BeginningNode.nextNode;
             }
             return information;
         } else {
@@ -55,7 +55,7 @@ public class fifoList {
 
     //Function for showing the lists content
     public void showContent() {
-        node routeNode = listBeginningNode;
+        node routeNode = BeginningNode;
         String invertedList = "";
 
         while (routeNode != null) {
