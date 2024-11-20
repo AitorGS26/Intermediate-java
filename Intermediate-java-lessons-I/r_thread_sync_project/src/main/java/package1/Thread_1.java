@@ -1,4 +1,4 @@
-/*Here it all starts. We start declaring the class with extends Thread for having this method. */
+/*Here it all starts. We start declaring the class with extends Thread for inheriting the class */
 package package1;
 
 public class Thread_1 extends Thread {
@@ -7,8 +7,7 @@ public class Thread_1 extends Thread {
     public void run() { //Here we start with run method which is inside Thread class
 
         /*For this project we want to print 5 times the word hello, each letter in a different thread
-         for syncronizing them. For that we start each thread class with a for loop*/
-
+         and syncronyze them. For that we start each thread class with a for loop*/
         for (int i = 0; i <= 5; i++) {
             System.out.print(i + ": H");
             /* We want to syncronize them so we put a sleep of a second in each class for printing them at

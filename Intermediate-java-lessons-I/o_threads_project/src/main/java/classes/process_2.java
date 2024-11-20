@@ -1,11 +1,10 @@
-/*In java there are two ways to work with threads, we'll se both.
- * 
- * Second way is to inherit a class of jdk Thread
- */
 package classes;
 
-public class process_2 extends Thread {//second way to use threads
-//I truly recommend this way, here you inherit, with the other you implement.
+/*The other way to use threads is to inherit thread class, which is a built-in class inside
+ Java's JDK. As we've seen in process one, here we've alro run() method, we'll make an override
+ for editing it and giving the method the task we want, in this case we add another loop
+ for printing second process five times*/
+public class process_2 extends Thread {
 
     @Override
     public void run() {

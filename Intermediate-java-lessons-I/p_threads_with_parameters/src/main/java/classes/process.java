@@ -1,50 +1,38 @@
 /*As we've seen in the previous threads lesson, we've two ways to
- use threads, for now on, I'll be using extends Thread, but you can choose whatever you want.
- 
- */
+ use threads, for now on, I'll be using extends Thread, this is because java only allows inheriting from one class*/
 package classes;
 
 public class process extends Thread {//we inherit thread father class
 
+    /*num_int variable will save the number of times run() method will iterate, this will give us the
+     control of how many numbers will the thread be printing */
     int num_int;
-    //this is the parameter which will receive info for two threads, for printing to one or other serial numbers
 
-    
-    /*Below we've put this.getname for knowing from which thread is printing the program.
-     * but the display is disgusting so we want to personalize it, for that we'll make a builder*/
+    /* This is a constructor which takes String threadname as an argument, inside of it with
+    super() we'll be calling the constructor of father class, and save the name into this classes threadname String*/
     public process(String threadName) {
         super(threadName);
-        
+
     }
 
-    @Override//it will be an abstract class so we've to use @override
+    /*The following is the "heart" of the thread, run() methos is the one
+    which will have the function we need the thread do.
+    In this case we want to print i with it's name and it will be printing "num_int" times
+     */
+    @Override
     public void run() {
-    //for threads we've learned we've to call run method and inside of it put the logic
         for (int i = 0; i <= num_int; i++) {
-            System.out.println(i + this.getName());
-            //we print i and also the thread name
+            System.out.println(i + this.getName());//this.getname will print i's name each time
+
         }
-        //Now we've to go to main class
+
         System.out.println("");
-        /*What if I want the thread1 print numbers until 5 and thread2 until 10?
-         * 1- we add a global variable called num_int, and put it inside for loop
-         this is for distinguish between the data received from thread 1 and thread 2.
-         */
+
     }
 
-    /*We've the global variable num_int, which will recieve info and put it into 
-     the for loop, but for communicating them we need to make a method,
-     we'll call it threadValue and we declare an object called value inside of it.@interface
-
-     * Inside of the method, we'll compare global variable with this, because
-     * we need to have info inside of "this" = value, which is the object inside the method.
-     * Now we've to go to main class*/
+    /*threadValue method will allow us to set the value of num int from outside, from other class that's not process class*/
     public void threadValue(int value) {
         this.num_int = value;
     }
-    /*LASTSTEP
-     * We've just received from the main class inside of value 10 for thread 1 and 4 for thread2
-     * this will be saved inside of num_int 
-     * num_int will be inside of the for loop and it will print 10 numbers for thread 1 and 4 for thread 2
-     */
+    /*threadvalue will come from other class, value is the data that the method is receiving*/
 }

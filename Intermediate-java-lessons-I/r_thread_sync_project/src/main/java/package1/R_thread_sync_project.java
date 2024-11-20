@@ -1,8 +1,7 @@
-/*In this project we'll print the word hello with syncronyzed threads.@interface
+/*In this project we'll print the word hello with syncronyzed threads.
  
  * For doing this, we've created 5 thread classes and a main class inside the same package.
- * We start from thread 1 son in this moment look at that class. 
- */
+ * We start from thread 1 son in this moment look at that class.*/
 package package1;
 
 public class R_thread_sync_project {
@@ -10,7 +9,8 @@ public class R_thread_sync_project {
     public static void main(String[] args) {
         /*We come here directly after creating all Thread classes. 
         
-         * We connect thread classes with this, main class*/
+         * We create an object of each class for having comunication with them.
+         * Each object with each class*/
         Thread_1 thread1 = new Thread_1();
         Thread_2 thread2 = new Thread_2();
         Thread_3 thread3 = new Thread_3();
@@ -18,12 +18,12 @@ public class R_thread_sync_project {
         Thread_5 thread5 = new Thread_5();
 
 
-        /*Now, as we've learned in the thread status lesson, we've threads created
-         and in "new" state because they only have been created and syncronized. for starting them
+        /*Now we've threads created and in "new" state because they only have been created 
+        and syncronized. for starting them
          we've to add the start method as below*/
         thread1.start();
         /*After proving this code, I've noticed that syncronizing it was being more difficult
-         than expected, the problem was I was putting same sleep time in the this thread objects
+         than expected, the problem was I was putting same sleep time in each thread object
          and in the thread classes. The correct way that has make the program work is 
          to play with timmings until we've the result that appears when you start the program.
 
