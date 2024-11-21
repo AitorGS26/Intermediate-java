@@ -27,3 +27,5 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/Intermediate-java-lessons-II/c_mySqlDataBases_studentDB/nbproject/private/
+/Intermediate-java-lessons-II/c_mySqlDataBases_studentDB/build/
