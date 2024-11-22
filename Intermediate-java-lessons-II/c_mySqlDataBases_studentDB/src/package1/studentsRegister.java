@@ -253,7 +253,7 @@ public class studentsRegister extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
+        //Method for deleting some bd's register.
         try{
             String ID = txt_studentCode.getText().trim();
             
