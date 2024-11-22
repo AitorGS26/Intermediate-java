@@ -21,9 +21,14 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+
+
+
 import java.awt.HeadlessException;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+
 
 
 public class studentsRegister extends javax.swing.JFrame {
@@ -222,8 +227,7 @@ public class studentsRegister extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Not registered");
             }
 
-        } catch (Exception e) {
-            e.printStackTrace(); // This will print the error details to the console
+        } catch (HeadlessException | SQLException e) { 
             JOptionPane.showMessageDialog(null, "Error: " + e.getMessage()); // For user-friendly errors
         }
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -243,7 +247,7 @@ public class studentsRegister extends javax.swing.JFrame {
             label_status.setText("Success modifying");
             
             
-        }catch(Exception e){
+        }catch(SQLException e){
         }
 
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -266,7 +270,7 @@ public class studentsRegister extends javax.swing.JFrame {
             label_status.setText("Success deleting");
             
             
-        }catch(Exception e){
+        }catch(SQLException e){
         }
         
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -278,6 +282,10 @@ public class studentsRegister extends javax.swing.JFrame {
       try{
           String route = System.getProperty("user.home");
           PdfWriter.getInstance(document, new FileOutputStream(route + "/Desktop/studentsReport.pdf"));
+          
+          
+          
+          
           document.open();
           
           PdfPTable table = new PdfPTable(3);
@@ -303,12 +311,13 @@ public class studentsRegister extends javax.swing.JFrame {
                   document.add(table);
                   
               }
-          }catch(Exception e){
+          }catch(DocumentException | SQLException e){
           }
           document.close();
           JOptionPane.showMessageDialog(null, "Export to pdf finished");
       }catch(DocumentException | HeadlessException | FileNotFoundException e){
       }
+  
             
         
     }//GEN-LAST:event_exportDataActionPerformed
