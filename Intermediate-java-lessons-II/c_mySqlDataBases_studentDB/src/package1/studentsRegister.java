@@ -17,6 +17,14 @@ package package1;
 
 import java.sql.*; //We've to import sql library for allowing the program working with the databases we're working with
 import javax.swing.JOptionPane; 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.awt.HeadlessException;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
 
 public class studentsRegister extends javax.swing.JFrame {
 
@@ -39,6 +47,7 @@ public class studentsRegister extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         label_status = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        exportData = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +87,13 @@ public class studentsRegister extends javax.swing.JFrame {
             }
         });
 
+        exportData.setText("Export to PDF");
+        exportData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exportDataActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -100,10 +116,12 @@ public class studentsRegister extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txt_studentCode)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(exportData, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(label_status)
                     .addComponent(jButton4))
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,7 +138,8 @@ public class studentsRegister extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(jButton3)
+                    .addComponent(exportData))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txt_studentCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -252,6 +271,48 @@ public class studentsRegister extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void exportDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportDataActionPerformed
+        
+      Document document = new Document();
+      
+      try{
+          String route = System.getProperty("user.home");
+          PdfWriter.getInstance(document, new FileOutputStream(route + "/Desktop/studentsReport.pdf"));
+          document.open();
+          
+          PdfPTable table = new PdfPTable(3);
+          table.addCell("Student Code");
+          table.addCell("Student Name");
+          table.addCell("Student Group");
+          
+          try{
+              Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/first_db", "root", "");
+              PreparedStatement pst = connection.prepareStatement("select * from students");
+              
+              ResultSet rs = pst.executeQuery();
+              
+              if(rs.next()){
+                  
+                  do{
+                      
+                      table.addCell(rs.getString(1));
+                      table.addCell(rs.getString(2));
+                      table.addCell(rs.getString(3));
+                      
+                  }while(rs.next());
+                  document.add(table);
+                  
+              }
+          }catch(Exception e){
+          }
+          document.close();
+          JOptionPane.showMessageDialog(null, "Export to pdf finished");
+      }catch(DocumentException | HeadlessException | FileNotFoundException e){
+      }
+            
+        
+    }//GEN-LAST:event_exportDataActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -285,6 +346,7 @@ public class studentsRegister extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton exportData;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

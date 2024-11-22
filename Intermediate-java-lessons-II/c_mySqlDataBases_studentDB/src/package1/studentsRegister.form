@@ -46,11 +46,13 @@
                           <Component id="txt_studentCode" max="32767" attributes="0"/>
                           <Component id="jButton3" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="exportData" min="-2" pref="108" max="-2" attributes="0"/>
                   </Group>
                   <Component id="label_status" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton4" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="142" max="32767" attributes="0"/>
+              <EmptySpace pref="16" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -70,6 +72,7 @@
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="exportData" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
@@ -144,6 +147,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="exportData">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Export to PDF"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exportDataActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
